@@ -4348,4 +4348,20 @@ document.getElementById("site-title").addEventListener("click", () => {
     // 열림 상태 해제
     layout.classList.remove("open");
     document.body.classList.remove("open");
+    links.forEach(l => l.classList.remove("active"));
+});
+
+
+
+
+// -----------------------------------------------
+
+
+
+
+const menuToggle = document.getElementById("menu-toggle");
+const episodeNav = document.getElementById("episode-nav");
+
+menuToggle.addEventListener("click", () => {
+  episodeNav.classList.toggle("open");
 });

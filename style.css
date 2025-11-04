@@ -382,3 +382,49 @@ footer {
     width: 100%;
     margin: 0;
 }
+
+
+
+
+
+
+/* ------------------------------ */
+
+
+
+
+
+
+
+/* 기본: PC에서는 nav 보임 */
+#episode-nav {
+  width: 200px;
+}
+
+/* 모바일: nav 숨기고 토글 버튼만 보이게 */
+@media (max-width: 768px) {
+  #episode-nav {
+    display: none; /* 기본 숨김 */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 70%;
+    background: #2f3136;
+    height: 100%;
+    padding: 10px;
+  }
+
+  #episode-nav.open {
+    display: block; /* 버튼 누르면 열림 */
+  }
+
+  #menu-toggle {
+    display: block;
+    background: #5865f2;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
