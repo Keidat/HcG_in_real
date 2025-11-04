@@ -559,6 +559,21 @@ footer {
     background: #f0f0f0;
     padding: 10px;
   }
+
+  .top-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  #menu-toggle {
+    flex: 5;
+  }
+
+  #more-toggle {
+    flex: 1;
+    display: block; /* 모바일에서만 보이게 */
+  }
 }
 
 #more-toggle {
@@ -594,5 +609,4 @@ footer {
     background: #f0f0f0;
     padding: 10px;
   }
-
 }
