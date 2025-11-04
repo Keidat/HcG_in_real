@@ -393,6 +393,15 @@ footer {
 
 
 
+#menu-toggle {
+  display: none; /* 기본은 숨김 */
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block; /* 모바일에서만 보임 */
+  }
+}
 
 
 
