@@ -452,7 +452,7 @@ footer {
 }
 
 #extra-info {
-    display: block; /* 기본적으로 보이게 */
+    margin: auto;
 }
 
 
