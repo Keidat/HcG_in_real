@@ -544,6 +544,23 @@ footer {
 /* aside------------------------------ */
 
 
+
+/* 기본: aside 숨김 */
+#extra-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease; /* 애니메이션 */
+}
+
+/* 모바일에서만 동작 */
+@media (max-width: 768px) {
+  #extra-info.open {
+    max-height: 500px; /* 충분히 큰 값으로 설정 */
+  }
+}
+
+
+
 #more-toggle {
   display: none; /* PC에서는 기본적으로 숨김 */
 }
