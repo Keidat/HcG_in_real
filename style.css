@@ -580,22 +580,19 @@ footer {
   display: none;
 }
 
-/* 
 @media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
+  aside {
+    display: none;   /* 기본은 안 보임 */
   }
 
-  #extra-info.open {
-    display: block;
+  aside.open {
+    display: block;  /* 더보기 눌렀을 때만 보임 */
     width: 100%;
     margin-top: 10px;
     background: #f0f0f0;
     padding: 10px;
   }
 }
-*/
 
 @media (max-width: 768px) {
   aside {
