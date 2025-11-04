@@ -431,9 +431,31 @@ footer {
     }
 }
 
+/* button------------------------------------- */
 
 
 
+.top-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+#menu-toggle {
+  flex: 5; /* 5 비율 */
+}
+
+#more-toggle {
+  flex: 1; /* 1 비율 */
+}
+
+/* aside 기본 숨김 */
+#extra-info {
+  display: none;
+}
+
+
+
+/* ----------------------------button */
 
 /* nav------------------------------ */
 
@@ -513,4 +535,41 @@ footer {
         font-size: 18px;
         cursor: pointer;
     }
+}
+
+/* ------------------------------------nav */
+
+
+
+/* aside------------------------------ */
+
+
+#more-toggle {
+  display: none; /* PC에서는 기본적으로 숨김 */
+}
+
+
+@media (max-width: 768px) {
+  #more-toggle {
+    display: block; /* 모바일에서만 보임 */
+    flex: 1;        /* 메뉴 버튼과 5:1 비율 */
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #extra-info.open {
+    display: block;
+    width: 100%;       /* 한 행에 하나 */
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+  }
 }

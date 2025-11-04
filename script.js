@@ -4357,7 +4357,7 @@ document.getElementById("site-title").addEventListener("click", () => {
 // -----------------------------------------------
 
 
-
+// nav------------------------------------------------
 
 const menuToggle = document.getElementById("menu-toggle");
 const episodeNav = document.getElementById("episode-nav");
@@ -4369,4 +4369,18 @@ menuToggle.addEventListener("click", () => {
 const menuClose = document.getElementById("menu-close");
 menuClose.addEventListener("click", () => {
   episodeNav.classList.remove("open");
+});
+
+// ------------------------------------------------nav
+
+// aside------------------------------------------------
+
+
+
+
+const moreToggle = document.getElementById("more-toggle");
+const extraInfo = document.getElementById("extra-info");
+
+moreToggle.addEventListener("click", () => {
+  extraInfo.classList.toggle("open");
 });
