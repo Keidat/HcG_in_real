@@ -252,6 +252,7 @@ nav {
     overflow-x: hidden;
     padding-right: 4px;
     box-sizing: content-box;
+    background-color: #f5f5f5;
 }
 
 nav::-webkit-scrollbar {
