@@ -65,6 +65,8 @@ main {
 
 /* 메인 레이아웃 */
 main.layout {
+    align-items: stretch;
+
     display: flex;
     gap: 1rem;
     /* 박스 사이 여백 */
@@ -314,6 +316,10 @@ nav a:hover {
 
 /* aside 안의 카드 컨테이너 */
 aside {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* 기본 2열 */
@@ -456,9 +462,9 @@ footer {
     /* PC에서는 숨김 */
 }
 
-#extra-info {
+/* #extra-info {
     height: 100%;
-}
+} */
 
 
 /* ----------------------------button */
