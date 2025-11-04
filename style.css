@@ -285,6 +285,7 @@ nav ul {
     flex-direction: column;
     /* 세로 메뉴 */
     gap: 0.5rem;
+    text-shadow: 0px 0px 2px #fff;
 }
 
 nav a {
@@ -549,13 +550,13 @@ footer {
 #extra-info {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease; /* 애니메이션 */
+  transition: max-height 0.4s ease;
 }
 
 /* 모바일에서만 동작 */
 @media (max-width: 768px) {
   #extra-info.open {
-    max-height: 500px; /* 충분히 큰 값으로 설정 */
+    max-height: 500px;
   }
 }
 
@@ -585,6 +586,20 @@ footer {
   #extra-info.open {
     display: block;
     width: 100%;       /* 한 행에 하나 */
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  aside {
+    display: none;   /* 기본은 안 보임 */
+  }
+
+  aside.open {
+    display: block;  /* 더보기 눌렀을 때만 보임 */
+    width: 100%;
     margin-top: 10px;
     background: #f0f0f0;
     padding: 10px;
