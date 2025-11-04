@@ -437,18 +437,21 @@ footer {
 
 
 .top-buttons {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 10px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 #menu-toggle {
-  flex: 5; /* 5 비율 */
+    flex: 5;
+    /* 5 비율 */
 }
 
 #more-toggle {
-  flex: 1; /* 1 비율 */
-  display: none; /* PC에서는 숨김 */
+    flex: 1;
+    /* 1 비율 */
+    display: none;
+    /* PC에서는 숨김 */
 }
 
 #extra-info {
@@ -546,29 +549,29 @@ footer {
 
 
 @media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
 
-  /* 더보기 버튼은 모바일에서만 보이게 */
-  #more-toggle {
-    display: block;
-  }
+    /* 더보기 버튼은 모바일에서만 보이게 */
+    #more-toggle {
+        display: block;
+    }
 
-  /* aside는 기본 숨김 */
-  #extra-info {
-    display: none;
-  }
+    /* aside는 기본 숨김 */
+    #extra-info {
+        display: none;
+    }
 
-  /* 더보기 눌렀을 때만 보이도록 */
-  #extra-info.open {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    background: #f0f0f0;
-    padding: 10px;
-  }
+    /* 더보기 눌렀을 때만 보이도록 */
+    #extra-info.open {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        background: #f0f0f0;
+        padding: 10px;
+    }
 }
 
 /* ---------- */
