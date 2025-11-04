@@ -393,31 +393,36 @@ footer {
 
 
 
-/* 기본 PC 화면용 스타일 */
-#layout {
-  display: flex;
-  flex-direction: row; /* nav와 본문을 가로로 배치 */
-}
-
-/* 모바일 화면용 스타일 */
+/* PC는 그대로 두고, 모바일만 수정 */
 @media (max-width: 768px) {
-  #layout {
-    flex-direction: column; /* 세로로 쌓이게 */
+  main {
+    display: flex;
+    flex-direction: column; /* 세로 배치 */
   }
 
-  nav {
-    width: 100%;            /* nav가 위쪽에 꽉 차게 */
-    order: 1;               /* nav 먼저 */
+  /* 메뉴 버튼은 섹션 위쪽에 얇게 */
+  #menu-toggle {
+    order: 0;
+    width: 100%;
+    padding: 6px;
+    background: #5865f2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
   }
 
+  /* 본문 먼저 */
   #episode-container {
-    width: 100%;            /* 본문도 꽉 차게 */
-    order: 2;               /* nav 밑에 */
+    order: 1;
+    width: 100%;
   }
 
-  .nav-buttons {
-    flex-direction: column; /* 버튼도 세로로 배치 가능 */
-    gap: 10px;
+  /* aside는 본문 아래 */
+  aside {
+    order: 2;
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
