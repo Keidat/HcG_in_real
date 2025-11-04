@@ -528,6 +528,7 @@ footer {
 
     #episode-nav.open {
         display: block;
+        background-color: #f5f5f5;
         /* 버튼 누르면 열림 */
     }
 
@@ -575,51 +576,5 @@ footer {
     }
 }
 
-/* ---------- */
 
-/* @media (max-width: 768px) {
-  #extra-info {
-    display: none;
-  }
-
-  #extra-info.open {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    background: #f0f0f0;
-    padding: 10px;
-  }
-}
-
-#more-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  aside {
-    display: none;
-  }
-
-  aside.open {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    background: #f0f0f0;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #extra-info.open {
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    background: #f0f0f0;
-    padding: 10px;
-  }
-} */
+/* ------------------------------------aside */
