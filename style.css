@@ -11,6 +11,7 @@ body {
 
     display: flex;
     flex-direction: column;
+    background-color: #f5f5f5;
 }
 
 /* 전체 배경과 글자색 */
@@ -285,7 +286,6 @@ nav ul {
     flex-direction: column;
     /* 세로 메뉴 */
     gap: 0.5rem;
-    text-shadow: 0px 0px 2px #fff;
 }
 
 nav a {
@@ -545,38 +545,27 @@ footer {
 /* aside------------------------------ */
 
 
-
-/* 기본: aside 숨김 */
-#extra-info {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-/* 모바일에서만 동작 */
 @media (max-width: 768px) {
+  /* aside는 기본 숨김 */
+  #extra-info {
+    display: none;
+  }
+
+  /* 더보기 버튼 눌렀을 때만 보이도록 */
   #extra-info.open {
-    max-height: 500px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
   }
 }
-
-
 
 #more-toggle {
-  display: none; /* PC에서는 기본적으로 숨김 */
+  display: none;
 }
 
-
-@media (max-width: 768px) {
-  #more-toggle {
-    display: block; /* 모바일에서만 보임 */
-    flex: 1;        /* 메뉴 버튼과 5:1 비율 */
-  }
-}
-
-
-
-
+/* 
 @media (max-width: 768px) {
   main {
     display: flex;
@@ -585,7 +574,7 @@ footer {
 
   #extra-info.open {
     display: block;
-    width: 100%;       /* 한 행에 하나 */
+    width: 100%;
     margin-top: 10px;
     background: #f0f0f0;
     padding: 10px;
@@ -594,14 +583,14 @@ footer {
 
 @media (max-width: 768px) {
   aside {
-    display: none;   /* 기본은 안 보임 */
+    display: none;
   }
 
   aside.open {
-    display: block;  /* 더보기 눌렀을 때만 보임 */
+    display: block;
     width: 100%;
     margin-top: 10px;
     background: #f0f0f0;
     padding: 10px;
   }
-}
+} */
