@@ -4365,3 +4365,8 @@ const episodeNav = document.getElementById("episode-nav");
 menuToggle.addEventListener("click", () => {
   episodeNav.classList.toggle("open");
 });
+
+const menuClose = document.getElementById("menu-close");
+menuClose.addEventListener("click", () => {
+  episodeNav.classList.remove("open");
+});

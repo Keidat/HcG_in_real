@@ -403,6 +403,36 @@ footer {
   }
 }
 
+#menu-close {
+  display: block;
+  margin-bottom: 10px;
+  background: #ff5c5c;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* PC 기본: 닫기 버튼 숨김 */
+#menu-close {
+  display: none;
+}
+
+/* 모바일 전용: 닫기 버튼 보이기 */
+@media (max-width: 768px) {
+  #menu-close {
+    display: block;
+    margin-bottom: 10px;
+    background: #ff5c5c;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
 
 
 /* 기본: PC에서는 nav 보임 */
