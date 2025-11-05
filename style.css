@@ -574,7 +574,7 @@ footer {
 
     /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
-        display: block;
+        display: block !important;
         position: absolute;
         top: 100%;
         /* 버튼 바로 아래 */
