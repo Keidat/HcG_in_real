@@ -576,7 +576,7 @@ footer {
     #extra-info.open {
         display: block !important;
         /* position: absolute; */
-        top: 100%;
+        /* top: 100%; */
         /* 버튼 바로 아래 */
         right: 0;
         width: 220px;
