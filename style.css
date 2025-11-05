@@ -570,6 +570,11 @@ footer {
     /* aside는 기본 숨김 */
     #extra-info {
         display: none;
+    }
+
+    /* 더보기 눌렀을 때만 보이도록 */
+    #extra-info.open {
+        display: block;
         position: absolute;
         top: 100%;
         /* 버튼 바로 아래 */
@@ -582,11 +587,6 @@ footer {
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         padding: 0.5rem;
         z-index: 1000;
-    }
-
-    /* 더보기 눌렀을 때만 보이도록 */
-    #extra-info.open {
-        display: block;
     }
 
     #extra-info a {
