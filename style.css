@@ -448,7 +448,6 @@ footer {
     display: flex;
     gap: 5px;
     margin-bottom: 10px;
-    position: relative;
 }
 
 #menu-toggle {
@@ -559,6 +558,9 @@ footer {
 
 
 @media (max-width: 768px) {
+    .top-buttons {
+        position: relative;
+    }
 
     /* 더보기 버튼은 모바일에서만 보이게 */
     #more-toggle {
@@ -568,42 +570,46 @@ footer {
     /* aside는 기본 숨김 */
     #extra-info {
         display: none;
+        position: absolute;
+        top: 100%;
+        /* 버튼 바로 아래 */
+        right: 0;
+        width: 220px;
+        /* 드롭다운 너비 */
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        padding: 0.5rem;
+        z-index: 1000;
     }
 
     /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
         display: block;
-        position: absolute;
-        top: 100%;
-        right: 10px;
-        width: 70%;
-        /* nav처럼 화면 일부 차지 */
-        max-height: 70%;
-        /* 전체 높이 */
-        background: #f0f0f0;
-        padding: 1rem;
-        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
-        overflow-y: auto;
-        /* 내용 스크롤 */
-        z-index: 1000;
-        /* nav보다 위 */
     }
 
     #extra-info a {
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        padding: 0.5rem 0.75rem;
+        padding: 0.5rem;
         border-radius: 6px;
         text-decoration: none;
         color: #333;
         background: #fafafa;
-        border: 1px solid #ccc;
         margin-bottom: 0.5rem;
+        transition: background 0.2s;
     }
 
     #extra-info a:hover {
         background: #eee;
+    }
+
+    #extra-info img {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
     }
 }
 
