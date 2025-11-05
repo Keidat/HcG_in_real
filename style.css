@@ -572,13 +572,12 @@ footer {
     /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
         display: block;
-        position: fixed;
-        /* 화면 위에 고정 */
-        top: 0;
-        right: 0;
+        position: absolute;
+        top: 50px;
+        right: 10px;
         width: 70%;
         /* nav처럼 화면 일부 차지 */
-        height: 100%;
+        max-height: 70%;
         /* 전체 높이 */
         background: #f0f0f0;
         padding: 1rem;
