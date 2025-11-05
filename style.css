@@ -571,15 +571,22 @@ footer {
 
     /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
-        display: flex;
-        /* flex로 전환 */
-        flex-direction: column;
-        /* 세로 목록 */
-        gap: 0.5rem;
-        width: 100%;
-        margin-top: 10px;
+        display: block;
+        position: fixed;
+        /* 화면 위에 고정 */
+        top: 0;
+        right: 0;
+        width: 70%;
+        /* nav처럼 화면 일부 차지 */
+        height: 100%;
+        /* 전체 높이 */
         background: #f0f0f0;
-        padding: 10px;
+        padding: 1rem;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+        /* 내용 스크롤 */
+        z-index: 1000;
+        /* nav보다 위 */
     }
 
     #extra-info a {
@@ -592,18 +599,11 @@ footer {
         color: #333;
         background: #fafafa;
         border: 1px solid #ccc;
-        transition: background 0.3s;
+        margin-bottom: 0.5rem;
     }
 
     #extra-info a:hover {
         background: #eee;
-    }
-
-    #extra-info img {
-        width: 24px;
-        height: 24px;
-        border-radius: 4px;
-        object-fit: cover;
     }
 }
 
