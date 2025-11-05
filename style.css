@@ -558,9 +558,9 @@ footer {
 
 
 @media (max-width: 768px) {
-    /* .top-buttons {
+    .top-buttons {
         position: relative;
-    } */
+    }
 
     /* 더보기 버튼은 모바일에서만 보이게 */
     #more-toggle {
@@ -575,8 +575,8 @@ footer {
     /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
         display: block !important;
-        /* position: absolute;
-        top: 100%; */
+        position: absolute;
+        top: 100%;
         /* 버튼 바로 아래 */
         right: 0;
         width: 220px;
