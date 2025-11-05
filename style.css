@@ -558,10 +558,6 @@ footer {
 
 
 @media (max-width: 768px) {
-    main {
-        display: flex;
-        flex-direction: column;
-    }
 
     /* 더보기 버튼은 모바일에서만 보이게 */
     #more-toggle {
@@ -575,36 +571,40 @@ footer {
 
     /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
-        display: block;
+        display: flex;
+        /* flex로 전환 */
+        flex-direction: column;
+        /* 세로 목록 */
+        gap: 0.5rem;
         width: 100%;
         margin-top: 10px;
         background: #f0f0f0;
         padding: 10px;
     }
-}
 
+    #extra-info a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #333;
+        background: #fafafa;
+        border: 1px solid #ccc;
+        transition: background 0.3s;
+    }
 
-@media (max-width: 768px) {
-  aside {
-    display: flex;              /* flex로 전환 */
-    flex-direction: column;     /* 세로 배치 */
-    gap: 0.5rem;                /* 항목 간격 */
-  }
+    #extra-info a:hover {
+        background: #eee;
+    }
 
-  aside a {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #333;
-    background: #fafafa;
-    border: 1px solid #ccc;
-    transition: background 0.3s;
-  }
-
-  aside a:hover {
-    background: #eee;
-  }
+    #extra-info img {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        object-fit: cover;
+    }
 }
 
 
