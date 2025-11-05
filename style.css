@@ -448,6 +448,7 @@ footer {
     display: flex;
     gap: 5px;
     margin-bottom: 10px;
+    position: relative;
 }
 
 #menu-toggle {
@@ -573,7 +574,7 @@ footer {
     #extra-info.open {
         display: block;
         position: absolute;
-        top: 50px;
+        top: 100%;
         right: 10px;
         width: 70%;
         /* nav처럼 화면 일부 차지 */
