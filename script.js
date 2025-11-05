@@ -4311,7 +4311,7 @@ links.forEach(link => {
 
             if (num > 0) {
                 const prevBtn = document.createElement("button");
-                prevBtn.textContent = "\u2B9C 이전화";
+                prevBtn.textContent = "◀ 이전화";
                 prevBtn.addEventListener("click", () => {
                     document.querySelector(`.episode-link[data-episode="${num - 1}"]`).click();
                 });
@@ -4323,7 +4323,7 @@ links.forEach(link => {
             // 다음화 버튼 (num < finalNum일 때만)
             if (num < finalNum) {
                 const nextBtn = document.createElement("button");
-                nextBtn.textContent = "다음화 \u2B9E";
+                nextBtn.textContent = "다음화 ▶";
                 nextBtn.addEventListener("click", () => {
                     document.querySelector(`.episode-link[data-episode="${num + 1}"]`).click();
                 });
