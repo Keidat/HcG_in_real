@@ -4336,8 +4336,11 @@ links.forEach(link => {
 
         }
 
-layout.classList.add("open");
-document.body.classList.add("open"); // 헤더 제어용
+        layout.classList.add("open");
+        document.body.classList.add("open"); // 헤더 제어용
+        episodeNav.addEventListener("click", () => {
+            episodeNav.classList.add("height");
+        });
     });
 });
 
@@ -4349,6 +4352,7 @@ document.getElementById("site-title").addEventListener("click", () => {
     layout.classList.remove("open");
     document.body.classList.remove("open");
     links.forEach(l => l.classList.remove("active"));
+    episodeNav.classList.remove("height");
 });
 
 
@@ -4357,30 +4361,48 @@ document.getElementById("site-title").addEventListener("click", () => {
 // -----------------------------------------------
 
 
+
+
+
+
 // nav------------------------------------------------
 
 const menuToggle = document.getElementById("menu-toggle");
 const episodeNav = document.getElementById("episode-nav");
 
 menuToggle.addEventListener("click", () => {
-  episodeNav.classList.toggle("open");
+    episodeNav.classList.toggle("open");
+    overlay.classList.add("open");
 });
 
 const menuClose = document.getElementById("menu-close");
 menuClose.addEventListener("click", () => {
-  episodeNav.classList.remove("open");
+    episodeNav.classList.remove("open");
+    overlay.classList.remove("open");
 });
 
 // ------------------------------------------------nav
 
 // aside------------------------------------------------
 
-
-
-
 const moreToggle = document.getElementById("more-toggle");
 const extraInfo = document.getElementById("extra-info");
 
 moreToggle.addEventListener("click", () => {
-  extraInfo.classList.toggle("open");
+    extraInfo.classList.toggle("open");
+    overlay.classList.toggle("open");
 });
+
+// -------------------------------------------------aside
+
+
+// overlay-------------------------------------------
+
+overlay.addEventListener("click", () => {
+    // nav 닫기
+    episodeNav.classList.remove("open");
+    extraInfo.classList.remove("open");
+    overlay.classList.remove("open");
+});
+
+// -------------------------------------------------overlay

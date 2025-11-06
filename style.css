@@ -419,7 +419,7 @@ footer {
         order: 0;
         width: 100%;
         padding: 6px;
-        background: #5865f2;
+        background: #333;
         color: #fff;
         border: none;
         cursor: pointer;
@@ -475,6 +475,7 @@ footer {
 #menu-toggle {
     display: none;
     /* 기본은 숨김 */
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -536,12 +537,17 @@ footer {
     #episode-nav.open {
         display: block;
         background-color: #f5f5f5;
-        /* 버튼 누르면 열림 */
+        z-index: 1000;
+        margin-top: 85px;
+    }
+
+    #episode-nav.height {
+        margin-top: 50px;
     }
 
     #menu-toggle {
         display: block;
-        background: #5865f2;
+        background: #333;
         color: #fff;
         border: none;
         padding: 8px 12px;
@@ -565,6 +571,8 @@ footer {
     /* 더보기 버튼은 모바일에서만 보이게 */
     #more-toggle {
         display: block;
+        border-radius: 5px;
+        border: 1px solid #aaa;
     }
 
     /* aside는 기본 숨김 */
@@ -576,7 +584,6 @@ footer {
     #extra-info.open {
         display: block !important;
         position: absolute;
-        /* top: 100%; */
         /* 버튼 바로 아래 */
         right: 0;
         width: 220px;
@@ -618,3 +625,27 @@ footer {
 
 
 /* ------------------------------------aside */
+
+
+
+/* overlay for mobile nav and aside */
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 900;
+}
+
+#overlay.open {
+  display: block;
+}
+
+
+
+/* overlay for mobile nav and aside */
