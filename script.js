@@ -4280,7 +4280,8 @@ NPC들이 플레이어는 구분할 수는 있겠지만,
 
 드듣은 이상한 놈을 보는 표정으로 케이를 쳐다봤다.
     ` },
-    44: { title: "44화 | 설명",
+    44: {
+        title: "44화 | 설명",
         content: `
 케이는 빠른 상황 설명을 위해 드듣을 끌고 밖으로 나갔다.
 영문도 모른채 왕성을 옮기자는 말도 안되는 소리를 하고는
@@ -4456,6 +4457,7 @@ links.forEach(link => {
 });
 
 document.getElementById("site-title").addEventListener("click", () => {
+    container.scrollTop = 0;
     // 섹션 내용 비우기
     container.innerHTML = "";
 
