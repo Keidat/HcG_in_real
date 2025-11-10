@@ -267,7 +267,7 @@ nav {
     overflow-x: hidden;
     padding-right: 4px;
     box-sizing: content-box;
-    background-color: #f5f5f5;
+    background-color: #fafafa;
 }
 
 nav::-webkit-scrollbar {
@@ -311,7 +311,7 @@ nav a {
     transition: background 0.3s;
     border: 0px solid #ccc;
     margin-right: 15px;
-    background-color: #f5f5f5;
+    background-color: #fafafa;
 }
 
 nav a:hover {
