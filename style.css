@@ -547,7 +547,7 @@ footer {
 
     #episode-nav.open {
         display: block;
-        background-color: #f5f5f5;
+        background-color: #fafafa;
         z-index: 1000;
         margin-top: 85px;
         height: 70%;
