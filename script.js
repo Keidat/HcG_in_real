@@ -4452,6 +4452,7 @@ links.forEach(link => {
         document.body.classList.add("open"); // 헤더 제어용
         episodeNav.addEventListener("click", () => {
             episodeNav.classList.add("height");
+            container.scrollTop = 0;
         });
     });
 });
@@ -4486,12 +4487,7 @@ const episodeNav = document.getElementById("episode-nav");
 menuToggle.addEventListener("click", () => {
     episodeNav.classList.toggle("open");
     overlay.classList.add("open");
-});
-
-const menuClose = document.getElementById("menu-close");
-menuClose.addEventListener("click", () => {
-    episodeNav.classList.remove("open");
-    overlay.classList.remove("open");
+    episodeNav.scrollTop = 0;
 });
 
 // ------------------------------------------------nav
@@ -4504,7 +4500,9 @@ const extraInfo = document.getElementById("extra-info");
 moreToggle.addEventListener("click", () => {
     extraInfo.classList.toggle("open");
     overlay.classList.toggle("open");
+    episodeNav.scrollTop = 0;
 });
+
 
 // -------------------------------------------------aside
 
@@ -4516,6 +4514,7 @@ overlay.addEventListener("click", () => {
     episodeNav.classList.remove("open");
     extraInfo.classList.remove("open");
     overlay.classList.remove("open");
+    episodeNav.scrollTop = 0;
 });
 
 
