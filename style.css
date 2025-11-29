@@ -225,7 +225,7 @@ code {
     display: inline;
     font-size: 0.85em;
     /* 살짝 작은 글씨 */
-    color: #52565a;
+    color: #9aa0a6;
     /* 덜 강조된 회색 톤 */
     /* line-height: 1.4; */
 }
@@ -631,5 +631,6 @@ footer {
 
 
 /* overlay for mobile nav and aside */
+
 
 
