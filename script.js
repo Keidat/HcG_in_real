@@ -5156,12 +5156,10 @@ PTSD, 이른바 '심리적 외상 후 스트레스 장애'로 의심되는 행�
 
 <div class='code-block'>※당신의 역할에 충실히 임해주세요.※
 </div>
-
 <div class='code-block'>아국의 왕을 공격하였습니다.
 패널티가 적용됩니다.
 1시간동안 오감중 하나가 차단됩니다.
 </div>
-
 <div class='code-block'>촉각'을 차단당했습니다.
 </div>
 
@@ -5315,6 +5313,7 @@ overlay.addEventListener("click", () => {
 
 
 // -------------------------------------------------overlay
+
 
 
 
