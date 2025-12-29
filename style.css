@@ -1,4 +1,4 @@
-/* 기본 초기화 */
+/* ==================== 기본 초기화 ==================== */
 html,
 body {
     margin: 0;
@@ -8,101 +8,79 @@ body {
     min-height: 100vh;
     height: 100%;
     user-select: none;
-
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
 }
 
-/* 전체 배경과 글자색 */
 body {
-    background-color: #f5f5f5;
-    /* 밝은 회색 배경 */
     color: #333;
-    /* 진한 회색 글자 */
     flex: 1;
 }
 
-/* 헤더 */
+/* ==================== 헤더 ==================== */
 header {
     background-color: #222;
-    /* 어두운 톤 */
-    color: #ffffff;
+    color: #fff;
     padding: 20px;
     width: 100%;
     margin: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-
     transition: all 0.4s ease;
 }
 
 header h1 {
-    margin: 0;
+    margin: 0 50px 0 0;
     transition: all 0.4s ease;
-    margin-right: 50px;
 }
 
 body.open header {
     padding: 10px 20px;
-    /* 높이 줄이기 */
     justify-content: flex-start;
-    /* 왼쪽 정렬 */
     text-align: left;
 }
 
 body.open header h1 {
     font-size: 1.2rem;
-    /* 글자 크기도 줄이기 */
 }
 
+/* ==================== 메인 레이아웃 ==================== */
 main {
     display: flex;
 }
 
-/* 메인 레이아웃 */
 main.layout {
-    align-items: stretch;
-
     display: flex;
-    gap: 1rem;
-    /* 박스 사이 여백 */
     flex: 1;
-    /* 남은 공간을 모두 차지 → footer를 아래로 밀어냄 */
+    gap: 1rem;
     padding: 1rem;
     box-sizing: border-box;
     width: 100%;
     margin: 0;
-
     min-height: 0;
     overflow: hidden;
     align-items: stretch;
 }
 
-/* nav, section, aside 공통 박스 스타일 */
+/* ==================== nav, aside, section 공통 박스 ==================== */
 nav,
-aside {
+aside,
+.layout.open section {
     background: #fff;
-    /* 흰색 박스 */
     border: 1px solid #ccc;
-    /* 얇은 회색 보더 */
     border-radius: 10px;
-    /* 모서리 둥글게 */
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    /* 은은한 그림자 */
     transition: flex 0.5s ease;
     box-sizing: border-box;
 }
 
-/* nav와 aside는 처음에 화면을 양분 */
 nav,
 aside {
     flex: 1;
-
     min-height: 0;
     overflow: hidden;
 }
@@ -114,48 +92,24 @@ section {
     min-height: 0;
 }
 
-
-/* section----------------------------------- */
-
-
-/* section은 처음엔 닫혀 있음 */
+/* ==================== section ==================== */
 section {
     flex: 0;
     min-width: 0;
-
-    /* display: none; */
 }
 
-/* nav 클릭 시 가운데 열림 */
 .layout.open section {
     display: block;
     flex: 3;
     overflow-y: auto;
-    min-height: 0;
-
-
-    background: #fff;
-    /* 흰색 박스 */
-    border: 1px solid #ccc;
-    /* 얇은 회색 보더 */
-    border-radius: 10px;
-    /* 모서리 둥글게 */
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    /* 은은한 그림자 */
-    transition: flex 0.5s ease;
-    box-sizing: border-box;
 }
 
 .episode-text {
     white-space: pre-wrap;
     user-select: none;
     -webkit-user-select: none;
-    /* 크롬/사파리 */
     -moz-user-select: none;
-    /* 파이어폭스 */
     -ms-user-select: none;
-    /* IE/Edge 구버전 */
 }
 
 .episode-link {
@@ -172,97 +126,53 @@ section {
     background: #cecfd1;
 }
 
-
-
-
-
-section::-webkit-scrollbar {
+/* 공통 스크롤바 */
+section::-webkit-scrollbar,
+nav::-webkit-scrollbar {
     width: 3px;
     height: 1px;
 }
 
-/* 스크롤바 트랙 (배경) */
-section::-webkit-scrollbar-track {
+section::-webkit-scrollbar-track,
+nav::-webkit-scrollbar-track {
     background: #c9c2c2;
-    /* 어두운 배경 */
     border-radius: 10px;
     margin: 4.2px 0;
 }
 
-/* 스크롤바 핸들 (움직이는 부분) */
-section::-webkit-scrollbar-thumb {
-    background: #666666;
-    /* 디스코드 느낌의 보라색 */
+section::-webkit-scrollbar-thumb,
+nav::-webkit-scrollbar-thumb {
+    background: #666;
     border-radius: 8px;
 }
 
+/* ==================== 코드 블록 ==================== */
+.code-block,
+code {
+    background: #2f313621;
+    color: #000;
+    border-radius: 4px;
+    white-space: pre-wrap;
+}
 
 .code-block {
-    background: #2f313621;
-    color: #000000;
     padding: 8px;
     border-radius: 8px;
-    /* font-family: monospace;*/
-    white-space: pre-wrap;
-    /* 줄바꿈 유지 */
 }
 
 code {
-    background: #2f313621;
-    /* 디스코드 느낌의 어두운 배경 */
-    color: #000000;
-    /* 글자색 */
     padding: 2px 4px;
-    /* 안쪽 여백 */
-    border-radius: 4px;
-    /* 둥근 모서리 */
     font-family: monospace;
-    /* 고정폭 폰트 */
-    /* font-size: 0.95em; */
 }
 
 .discord-small {
     display: inline;
     font-size: 0.85em;
-    /* 살짝 작은 글씨 */
     color: #9aa0a6;
-    /* 덜 강조된 회색 톤 */
-    /* line-height: 1.4; */
 }
 
-
-
-.nav-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.nav-buttons button {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    background: #5865f2;
-    color: #fff;
-    cursor: pointer;
-}
-
-.nav-buttons button:hover {
-    background: #4752c4;
-}
-
-
-
-
-/* ------------------------------------------section */
-
-
-/* nav------------------------------------------- */
-
-
-
+/* ==================== nav 내부 메뉴 ==================== */
 nav {
-    /* max-height: 300px; */
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 4px;
@@ -270,35 +180,12 @@ nav {
     background-color: #fafafa;
 }
 
-nav::-webkit-scrollbar {
-    width: 3px;
-    height: 1px;
-}
-
-/* 스크롤바 트랙 (배경) */
-nav::-webkit-scrollbar-track {
-    background: #c9c2c2;
-    border-radius: 10px;
-    margin: 4.2px 0;
-}
-
-/* 스크롤바 핸들 (움직이는 부분) */
-nav::-webkit-scrollbar-thumb {
-    background: #666666;
-    border-radius: 8px;
-}
-
-
-
-
-/* nav 내부 메뉴 */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* 세로 메뉴 */
     gap: 0.3rem;
 }
 
@@ -309,7 +196,6 @@ nav a {
     display: block;
     border-radius: 6px;
     transition: background 0.3s;
-    border: 0px solid #ccc;
     margin-right: 15px;
     background-color: #fafafa;
 }
@@ -318,51 +204,29 @@ nav a:hover {
     background: #eee;
 }
 
-
-/* -------------------------------------------nav */
-
-
-/*aside------------------------------------------- */
-
-
-/* aside 안의 카드 컨테이너 */
+/* ==================== aside ==================== */
 aside {
-    flex: 1;
-    min-height: 0;
-    /* height: auto; */
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 기본 2열 */
     gap: 0.75rem;
-    /* 카드 간격 */
     align-content: start;
-    /* 세로 공간 위쪽 정렬 */
     justify-items: stretch;
-    /* 가로는 꽉 채움 */
-    box-sizing: border-box;
 }
 
-/* open 상태: 1열로 전환 */
 .layout.open aside {
     grid-template-columns: 1fr;
-    /* 한 줄 전체 차지 */
 }
 
-/* link-card 스타일 */
 .link-card a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
     background: #fafafa;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 0.5rem;
-
     text-decoration: none;
     color: #333;
-
     transition: background 0.3s, transform 0.2s;
 }
 
@@ -383,13 +247,7 @@ aside {
     font-weight: 500;
 }
 
-
-
-/*--------------------------------------------aside */
-
-
-
-/* 디스코드 아이콘 */
+/* ==================== 기타 ==================== */
 .discord {
     width: 128px;
     height: 128px;
@@ -397,7 +255,6 @@ aside {
     margin: 20px auto;
 }
 
-/* 푸터 */
 footer {
     background: #222;
     color: #fff;
@@ -407,25 +264,66 @@ footer {
     margin: 0;
 }
 
+/* ==================== 버튼 ==================== */
+.top-buttons {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
 
+#menu-toggle {
+    flex: 5;
+    display: none;
+    border-radius: 5px;
+}
 
+#more-toggle {
+    flex: 1;
+    display: none;
+}
+/* ==================== 섹션 하단 네비게이션 버튼 ==================== */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
+.nav-buttons button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background: #5865f2;
+    color: #fff;
+    cursor: pointer;
+}
 
+.nav-buttons button:hover {
+    background: #4752c4;
+}
 
-/* ------------------------------ */
+/* ==================== 오버레이 ==================== */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 900;
+}
 
+#overlay.open {
+    display: block;
+}
 
-
-
-/* PC는 그대로 두고, 모바일만 수정 */
+/* ==================== 모바일 ================================================================== */
 @media (max-width: 768px) {
     main {
-        display: flex;
         flex-direction: column;
-        /* 세로 배치 */
     }
 
-    /* 메뉴 버튼은 섹션 위쪽에 얇게 */
+    /* 메뉴 버튼 */
     #menu-toggle {
         order: 0;
         width: 100%;
@@ -435,76 +333,26 @@ footer {
         border: none;
         cursor: pointer;
         text-align: left;
+        display: block;
+        font-size: 18px;
     }
 
-    /* 본문 먼저 */
+    /* 본문 */
     #episode-container {
         order: 1;
         width: 100%;
     }
 
-    /* aside는 본문 아래 */
+    /* aside */
     aside {
         order: 2;
         width: 100%;
         margin-top: 10px;
     }
-}
 
-/* button------------------------------------- */
-
-
-
-.top-buttons {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-#menu-toggle {
-    flex: 5;
-    /* 5 비율 */
-}
-
-#more-toggle {
-    flex: 1;
-    /* 1 비율 */
-    display: none;
-    /* PC에서는 숨김 */
-}
-
-/* #extra-info {
-    height: 100%;
-} */
-
-
-/* ----------------------------button */
-
-/* nav------------------------------ */
-
-
-#menu-toggle {
-    display: none;
-    /* 기본은 숨김 */
-    border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-    #menu-toggle {
-        display: block;
-        /* 모바일에서만 보임 */
-    }
-}
-/* 기본: PC에서는 nav 보임 */
-#episode-nav {
-    width: 200px;
-}
-
-/* 모바일: nav 숨기고 토글 버튼만 보이게 */
-@media (max-width: 768px) {
+    /* nav */
     #episode-nav {
         display: none;
-        /* 기본 숨김 */
         position: absolute;
         top: 50px;
         left: 0;
@@ -526,49 +374,26 @@ footer {
         margin-top: 50px;
     }
 
-    #menu-toggle {
-        display: block;
-        background: #333;
-        color: #fff;
-        border: none;
-        padding: 8px 12px;
-        font-size: 18px;
-        cursor: pointer;
-    }
-}
-
-/* ------------------------------------nav */
-
-
-
-/* aside------------------------------ */
-
-
-@media (max-width: 768px) {
+    /* aside 더보기 */
     .top-buttons {
         position: relative;
     }
 
-    /* 더보기 버튼은 모바일에서만 보이게 */
     #more-toggle {
         display: block;
         border-radius: 5px;
         border: 1px solid #aaa;
     }
 
-    /* aside는 기본 숨김 */
     #extra-info {
         display: none;
     }
 
-    /* 더보기 눌렀을 때만 보이도록 */
     #extra-info.open {
         display: block !important;
         position: absolute;
-        /* 버튼 바로 아래 */
         right: 0;
         width: 220px;
-        /* 드롭다운 너비 */
         background: #f0f0f0;
         border: 1px solid #ccc;
         border-radius: 6px;
@@ -601,36 +426,3 @@ footer {
         object-fit: cover;
     }
 }
-
-
-
-
-/* ------------------------------------aside */
-
-
-
-/* overlay for mobile nav and aside */
-
-
-#overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 900;
-}
-
-#overlay.open {
-    display: block;
-}
-
-
-
-
-/* overlay for mobile nav and aside */
-
-
-
