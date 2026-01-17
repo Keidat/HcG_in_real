@@ -9,12 +9,10 @@ episodes.forEach((ep, index) => {
     const li = document.createElement("li");
     const a = document.createElement("a");
     
-    a.textContent = ep.title;          // 제목 표시
-    a.href = "#";                      // 기본 링크
-    a.classList.add("episode-link");   // 기존 스타일 유지
+    a.textContent = ep.title;
+    a.href = "#";
+    a.classList.add("episode-link");
     a.setAttribute("data-episode", index);
-    //   a.dataset.episode = index;
-    // 클릭 시 번호 전달
 
     li.appendChild(a);
     episodeList.appendChild(li);
