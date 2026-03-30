@@ -1,4 +1,4 @@
-import { episodes } from "./episodes.js";
+import { episodes } from "./subepisodes.js";
 const finalNum = episodes.length - 1;
 
 const container = document.getElementById("episode-container");
@@ -99,7 +99,7 @@ document.getElementById("site-title").addEventListener("click", () => {
     if (clickCount >= 10) {
         clearTimeout(timer);
         clickCount = 0;
-        window.location.href = "subindex.html";
+        window.location.href = "index.html";
     }
 });
 
