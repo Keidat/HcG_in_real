@@ -171,6 +171,21 @@ code {
     color: #9aa0a6;
 }
 
+.spoiler {
+    background-color: #2f3136; /* 디스코드 느낌의 어두운 배경 */
+    color: transparent; /* 배경과 같은 색상으로 글자 숨김 */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 2px 4px;
+}
+
+/* 클릭 시 보이도록 */
+.spoiler.revealed {
+    background-color: #cecece7e;
+    color: #000;
+}
+
 /* ==================== nav 내부 메뉴 ==================== */
 nav {
     overflow-y: auto;
