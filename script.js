@@ -96,7 +96,7 @@ document.getElementById("site-title").addEventListener("click", () => {
         }, 30000);
     }
 
-    if (clickCount >= 10) {
+    if (clickCount >= 5) {
         clearTimeout(timer);
         clickCount = 0;
         window.location.href = "subindex.html";
