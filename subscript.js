@@ -103,6 +103,13 @@ document.getElementById("site-title").addEventListener("click", () => {
     }
 });
 
+document.addEventListener('click', e => {
+    if (e.target.classList.contains('spoiler')) {
+        e.target.classList.toggle('revealed');
+    }
+});
+
+
 // -----------------------------------------------
 
 // nav------------------------------------------------
